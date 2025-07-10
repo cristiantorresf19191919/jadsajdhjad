@@ -34,7 +34,17 @@ pip install -r requirements.txt
 
 Start the server with:
 ```bash
-uvicorn app.main:app --reload
+fastapi dev main.py
+```
+
+Or alternatively:
+```bash
+uvicorn main:app --reload
+```
+
+Or using the run script:
+```bash
+python run.py
 ```
 
 The API will be available at:
@@ -101,8 +111,10 @@ curl -X DELETE "http://localhost:8000/properties/1"
 
 ```
 HouselyBack/
+├── main.py                  # FastAPI application entry point
 ├── app/
-│   ├── main.py              # FastAPI application entry point
+│   ├── __init__.py
+│   ├── models/
 │   │   ├── __init__.py
 │   │   └── property.py      # Property data models
 │   ├── code/

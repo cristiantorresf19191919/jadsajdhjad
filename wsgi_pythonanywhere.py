@@ -10,7 +10,7 @@ if project_home not in sys.path:
 os.chdir(project_home)
 
 try:
-    from app.main import app
+    from main import app
     application = app
 except ImportError as e:
     print(f"Import error: {e}")

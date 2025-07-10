@@ -6,7 +6,7 @@ sys.path.insert(0, '/home/abaqueroc/HouselyBackPython')
 
 from fastapi import FastAPI
 from fastapi.middleware.wsgi import WSGIMiddleware
-from app.main import app
+from main import app
 
 # Create a WSGI application from the FastAPI app
 application = app 
